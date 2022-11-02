@@ -7,7 +7,7 @@ import (
 )
 
 type Service interface {
-	RegisterUSer(input RegisterUserInput) (User, error)
+	RegisterUser(input RegisterUserInput) (User, error)
 	Login(input LoginInput) (User, error)
 }
 
@@ -19,7 +19,7 @@ func NewService(repository Repository) *service {
 	return &service{repository}
 }
 
-func (s *service) RegisterUSer(input RegisterUserInput) (User, error) {
+func (s *service) RegisterUser(input RegisterUserInput) (User, error) {
 	user := User{}
 	user.Name = input.Name
 	user.Email = input.Email
