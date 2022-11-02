@@ -16,7 +16,7 @@ func NewUserHandler(userService users.Service) *userHandler {
 	return &userHandler{userService}
 }
 
-func (h *userHandler) RegisterUSer(c *gin.Context) {
+func (h *userHandler) RegisterUser(c *gin.Context) {
 	// tangkap input dari user
 	// map input dari user ke struct RegisterUserInput
 	// struct di atas kita passing sebagai parameter service
@@ -32,7 +32,7 @@ func (h *userHandler) RegisterUSer(c *gin.Context) {
 		return
 	}
 
-	user, err := h.userService.RegisterUSer(input)
+	user, err := h.userService.RegisterUser(input)
 	if err != nil {
 		errors := helper.FormatValidationError(err)
 		errorMessage := gin.H{"errors": errors}
