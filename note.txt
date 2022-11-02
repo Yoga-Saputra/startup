@@ -1,0 +1,24 @@
+install gin untuk http frameworknya :
+    -   go get -u github.com/gin-gonic/gin
+install db akses gorm :
+    -   go get -u gorm.io/gorm
+    -   go get -u gorm.io/driver/sqlite or
+    -   go get -u gorm.io/driver/mysql
+
+
+note :
+//untuk looping data dari db
+for _, user := range users {
+    fmt.Println(user.Name)
+}
+
+// input
+// handler mapping input dari user ->  ke struct input
+// service melakukan mapping dari struct input ke struct User
+// repository save struct User ke db
+// db
+
+• Penggunaan Fungsi fmt.Sprintf()
+Fungsi fmt.Sprintf() pada dasarnya sama dengan fmt.Printf(), hanya saja fungsi ini tidak menampilkan nilai, melainkan mengembalikan nilainya dalam bentuk string. Pada kasus di atas, nilai kembalian fmt.Sprintf() ditampung oleh variabel msg.
+
+Selain fmt.Sprintf(), ada juga fmt.Sprint() dan fmt.Sprintln().
